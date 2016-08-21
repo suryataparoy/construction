@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>video</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width" content="initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+  	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="../public/jquery.bxslider.js"></script>
+
+</head>
+<body>
+	<section id="landing">
+		<video src="images/windygrassnoaudio.mp4" autoplay loop></video>
+		<div class="head_wrapper">
+			<nav>
+				<div class="logo"></div>
+				<div class="links">
+					<a href="">home</a>
+					<a href="">about us</a>
+					<a href="">projects</a>
+					<a href="">clients</a>
+					<a href="">contact</a>
+				</div>
+			</nav>
+			<div class="headtext">
+				<h1>Micheal Utility Services Ltd</h1>
+				<p>A Leading Multidiscipline Construction & Environmental Company</p>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$("h1").fadeIn(2000).delay(500).slideUp().slideDown();
+				$('p').fadeIn(5000);
+				$('.gallery').fadeIn(5000);
+				$('.para1').fadeIn(5000);
+
+
+				var $animation_elements = $('.animation-element');
+				var $window = $(window);
+
+				function check_if_in_view() {
+				  var window_height = $window.height();
+				  var window_top_position = $window.scrollTop();
+				  var window_bottom_position = (window_top_position + window_height);
+				 
+				  $.each($animation_elements, function() {
+				    var $element = $(this);
+				    var element_height = $element.outerHeight();
+				    var element_top_position = $element.offset().top;
+				    var element_bottom_position = (element_top_position + element_height);
+				 
+				    //check to see if this current container is within viewport
+				    if ((element_bottom_position >= window_top_position) &&
+				        (element_top_position <= window_bottom_position)) {
+				      $element.addClass('in-view');
+				    } else {
+				      $element.removeClass('in-view');
+				    }
+				  });
+				}
+
+				$window.on('scroll resize', check_if_in_view);
+				$window.trigger('scroll');				
+			});
+
+		</script>
+	</section>
+	<section id="about" >
+		<div class="animation-element slide-left testimonial">
+
+			<h2>About Us</h2>
+
+			<p>McHale Utility Services, established in 2006, is a leading multidiscipline construction and environmental company.Operating throughout the UK and Ireland delivered projects within the utilities, housing and energy sectors. We work hard to understand our client's needs and offer innovative, safe and sustainable solutions to the most complex challenges.
+
+			<div class="gallery">
+	            <li class="icons"><img src="images/abt1.jpg"></li>
+	            <li class="icons"><img src="images/abt2.jpg"></li>
+	            <li class="icons"><img src="images/abt3.jpg"></li>
+	        </div>
+	        <input type="button" class="button" value="READ MORE">
+	        <div id="abt1">
+	        	<p>McHale Utility Services LTD is an established Yorkshire company incorporated in 2006, having worked on projects throughout the UK delivering a cross section of environmental services for a number of clients, within the Energies, Housing, Transportation and Utility sectors.</p>
+	        </div>
+
+			<div id="abt2">
+				<p>The main areas of work which MUS delivers are External Environmental works (which includes new build, infrastructure support, drainage, paving, fencing, new and existing road construction resurfacing, concrete structure and repair etc.) and Specialist Environmental works (which includes Land Remediation, Demolition, Non-licenced Asbestos Contaminated Land Bulk Removal etc.)</p>
+				<img src="images/4.jpg" alt="pic">
+			</div>
+
+			<div id="abt3">
+				<p>McHale Utilities prides itself on its very high standards of Safety, Quality and Service. Which is delivered to all our clients by ou experienced management team and competent skilled workforce. We have insurances of £10m public and £10m employee liability. MUS is accredited be Chas and Construction Line, Achilles UVDB and ISO 9001 we are also members of the British Safety Council. MUS is currently in the process of attaining ISO 14001, and 18001. 
+				At McHale Utilities we believe in straight talking, working with our clients to deliver a good job, safely, for a fair price.</p>
+				<img src="images/abt5.jpg" alt="pic">
+			</div>
+		</div>
+
+		<script>
+		$(document).ready(function(){
+			$('.button').click(function(){
+				$('#abt1').fadeIn(1000);
+				$('#abt2').fadeIn(2000);
+				$('#abt3').fadeIn(3000);
+			})
+		})
+            $(".button").click(function() {
+                $('html,body').animate({
+                    scrollTop: $("#abt1").offset().top + 700},'slow');
+            });
+
+            $(document).ready(function(){
+  				$('#slider').bxSlider();
+			});
+		</script>
+	</section>
+
+	<section id="clients">
+		<div class="animation-element slide-left testimonial">
+			<h2>Our Clients</h2>
+			<p>We have worked with a variety of businesses from blue chip originations to non- for profit originations. Each presenting their own unique challenges and opportunities.</p>
+		</div>
+
+		<div class="slider-container">
+		<script type="text/javascript">
+  		$(document).ready(function(){
+     		$('#slider').bxSlider({
+    		ticker: true,
+    		tickerSpeed: 5000,
+			tickerHover: true
+  		});
+  		});
+		</script>
+
+			<center><ul id="slider">
+				<li><a href="#"><img src="images/A.jpg"></a></li>
+	        <li><a href="#"><img src="images/bsc-logo.png"></a></li>
+	        <li><a href="#"><img src="images/has.png"></a></li>
+	        <li><a href="#"><img src="images/logo_constructionline.gif"></a></li>
+	        <li><a href="#"><img src="images/b.gif"></a></li>
+	        <li><a href="#"><img src="images/3.jpg"></a></li>
+	        <li><a href="#"><img src="images/Achilles.png"></a></li>
+	        <li><a href="#"><img src="images/5.jpg"></a></li>
+	        <li><a href="#"><img src="images/6.jpg"></a></li>
+	        <li><a href="#"><img src="images/7.jpg"></a></li>
+	        <li><a href="#"><img src="images/8.jpg"></a></li>
+			</ul></center>
+
+		</div>
+		
+	</section>
+
+	<section id="projects">
+		<div class="animation-element slide-left testimonial">
+			<h2>OUR PROJECTS</h2>
+			<p>At McHale Utility Services we work hard to understand the needs and expectations of our stake holders so that we deliver projects on time and to budget.</p>
+			
+			<div class="icon" style="background:url(images/abt4.jpg) no-repeat 50% 50% ;">
+			  <a href="#">
+			  	<div class="overlay">
+			    	<div class="hover_feature_holder_inner">
+			           <h3 class="portfolio_title">
+			             <a href="#">Asset Protection Works</a>
+			           </h3>
+			           <div class="project_category">Quality Chain Supply</div>
+			           <a href="http://www.mchale-utilities.co.uk/#!projects/tlg7b" class="qbutton border">view</a>
+			        </div>
+
+			  	</div>
+			  </a>
+			</div>
+
+			<div class="icon" style="background:url(images/substation.jpg) no-repeat 50% 50% ;">
+			  <a href="#">
+			  	<div class="overlay">
+			    	<div class="hover_feature_holder_inner">
+			           <h3 class="portfolio_title">
+			             <a href="#">Substation Demolition</a>
+			           </h3>
+			           <div class="project_category">Quality Chain Supply</div>
+			           <a href="http://www.mchale-utilities.co.uk/#!projects/tlg7b" class="qbutton border">view</a>
+			        </div>
+
+			  	</div>
+			  </a>
+			</div>
+
+			<div class="icon" style="background:url(images/acl.jpg) no-repeat 50% 50% ;">
+			  <a href="#">
+			  	<div class="overlay">
+			    	<div class="hover_feature_holder_inner">
+			           <h3 class="portfolio_title">
+			             <a href="#">Asbestos Conlaminated Land</a>
+			           </h3>
+			           <div class="project_category">Quality Chain Supply</div>
+			           <a href="http://www.mchale-utilities.co.uk/#!projects/tlg7b" class="qbutton border">view</a>
+			        </div>
+
+			  	</div>
+			  </a>
+			</div>
+
+			<div class="icon" style="background:url(images/slider9.jpg) no-repeat 50% 50% ;">
+			  <a href="#">
+			  	<div class="overlay">
+			    	<div class="hover_feature_holder_inner">
+			           <h3 class="portfolio_title">
+			             <a href="#">Intersepter Installation</a>
+			           </h3>
+			           <div class="project_category">Quality Chain Supply</div>
+			           <a href="http://www.mchale-utilities.co.uk/#!projects/tlg7b" class="qbutton border">view</a>
+			        </div>
+
+			  	</div>
+			  </a>
+			</div>
+
+			<div class="icon" style="background:url(images/boundary.jpg) no-repeat 50% 50% ;">
+			  <a href="#">
+			  	<div class="overlay">
+			    	<div class="hover_feature_holder_inner">
+			           <h3 class="portfolio_title">
+			             <a href="#">Boundary walls to Highrise Flats</a>
+			           </h3>
+			           <div class="project_category">Quality Chain Supply</div>
+			           <a href="http://www.mchale-utilities.co.uk/#!projects/tlg7b" class="qbutton border">view</a>
+			        </div>
+
+			  	</div>
+			  </a>
+			</div>
+			
+			<div class="icon" style="background:url(images/housing.jpg) no-repeat 50% 50% ;">
+			  <a href="#">
+			  	<div class="overlay">
+			    	<div class="hover_feature_holder_inner">
+			           <h3 class="portfolio_title">
+			             <a href="#">Social Housing Environmentals</a>
+			           </h3>
+			           <div class="project_category">Quality Chain Supply</div>
+			           <a href="http://www.mchale-utilities.co.uk/#!projects/tlg7b" class="qbutton border">view</a>
+			        </div>
+
+			  	</div>
+			  </a>
+			</div>
+	        <a href="http://www.mchale-utilities.co.uk/#!projects/tlg7b"><input type="button" class="button" value="READ MORE"></a>
+		</div>
+	</section>
+
+
+	<section class="locfill">
+        <div id="bg1"></div>
+
+        <div id="bg2">
+            <div class="signwrap">
+                <span>Sign Up to Our NewsLetter!&nbsp;&nbsp;  </span> 
+                <input type="text" placeholder="Your Name">
+                <input type= "email" placeholder="Your Email">
+                <input type="button" class="button" value="Submit">
+            </div>
+        </div>
+                            
+        <div id="overlay">
+            <img class="cont" src="images/inter.jpg"><h1 class="cont">Contact Info  :   </h1><p class="cont">Visit Us at<br>68 Lower Lane <br>Little Gomersal<br>Cleckheaton<br>BD19 4HZ <br> <span style= "color: #C2C2BD;">Phone: 01274 959500<br>Email: office@mchale-utilities.co.uk<span></p>
+        </div>
+    </section>
+    <section id="last">
+    	<h2>Follow Us On</h2>
+    	<li class="fb"><a target="_blank" title="follow me on twitter" href="http://www.twitter.com/"><img alt="follow me on twitter" src="images/twitter_30x30.png" border=0></a></li>
+    	<li class="fb"><a target="_blank" title="follow me on twitter" href="http://www.twitter.com/"><img alt="follow me on twitter" src="images/twitter-b_30x30.png" border=0></a></li>
+    	<li class="fb"><a target="_blank" title="find us on Facebook" href="http://www.facebook.com/"><img alt="follow me on facebook" src="images/facebook_30x30.png" border=0></a></li>
+
+    	<h6>© 2016 J. Murphy & Sons Limited. All Rights Reserved Terms & conditions Accessibility Privacy policy Made by Enjoy Digital</h6>
+    </section>
+</body>
+</html>
