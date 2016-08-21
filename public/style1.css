@@ -39,6 +39,7 @@
 		letter-spacing: 1px;
 		margin-right: 3%;
 		font-size: 140%;
+		text-decoration: none;
 	}
 	@import url(https://fonts.googleapis.com/css?family=Exo+2);
 	.headtext{
@@ -49,13 +50,13 @@
 	    color: white;
 	}
 	.headtext h1{
-		font-size: 450%;
+		font-size: 400%;
 		font-weight: bolder;
 		display: none;
 		text-decoration: none;
 	}
 	.headtext p{
-		font-size: 150%;
+		font-size: 120%;
 		display: none;
 	}
 #about{
@@ -87,7 +88,7 @@
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px; 
-	margin-left: 15%;
+	margin-left: 10%;
 }
 
 #slider img { 
@@ -134,7 +135,7 @@
 	}
 	/*animation slide left styled for testimonials*/
 	.animation-element.slide-left.testimonial h2{
-		font-size: 300%;
+		font-size: 260%;
 	    	font-family: 'Exo 2', sans-serif;
 	    	padding-top: 2%;
 	    	text-transform: uppercase;
@@ -142,7 +143,7 @@
 	}
 	.animation-element.slide-left.testimonial p{
 		display: none;
-			font-size: 160%;
+			font-size: 130%;
 			margin: 5% ;
 			word-spacing: 3px;
 	}
@@ -341,7 +342,7 @@ background-image: url(images/map1.jpg);
     overflow: hidden;
 }
 #overlay p{
-	font-size: 120%;
+	font-size: 100%;
 	font-family: 'Open Sans', sans-serif;
 	float: right;
 	font-weight: bold;
@@ -350,7 +351,7 @@ background-image: url(images/map1.jpg);
 }
 #overlay h1{
 font-family: 'PT Sans Narrow', sans-serif;
-font-size: 320%;
+font-size: 300%;
 font-weight: normal;
 margin-left: 5%;
 }
